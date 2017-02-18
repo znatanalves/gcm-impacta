@@ -102,3 +102,32 @@ using AIO after an "X-Accel-Redirect" redirection.
 - Bugfix: reduced memory consumption for long-lived requests using
 gzipping.
 
+## WordPress - Versões
+WordPress 0.7.x, WordPress 1.0.x, WordPress 2.x.x, WordPress 3.x.x, WordPress 4.x.x
+
+Source: https://codex.wordpress.org/WordPress_Versions
+
+## Lista de Modificações
+
+### WordPress 4.7.1
+- Remote code execution (RCE) in PHPMailer – No specific issue appears to affect WordPress or any of the major plugins we investigated but, out of an abundance of caution, we updated PHPMailer in this release. This issue was reported to PHPMailer by Dawid Golunski and Paul Buonopane.
+
+- The REST API exposed user data for all users who had authored a post of a public post type. WordPress 4.7.1 limits this to only post types which have specified that they should be shown within the REST API. Reported by Krogsgard and Chris Jean.
+- Cross-site scripting (XSS) via the plugin name or version header on update-core.php. Reported by Dominik Schilling of the WordPress Security Team.
+
+- Cross-site request forgery (CSRF) bypass via uploading a Flash file. Reported by Abdullah Hussam.
+
+- Cross-site scripting (XSS) via theme name fallback. Reported by Mehmet Ince.
+
+- Post via email checks mail.example.com if default settings aren’t changed. Reported by John Blackbourn of the WordPress Security Team.
+
+- A cross-site request forgery (CSRF) was discovered in the accessibility mode of widget editing. Reported by Ronnie Skansing.
+
+- Weak cryptographic security for multisite activation key. Reported by Jack.
+
+### WordPress 4.7.2
+- The user interface for assigning taxonomy terms in Press This is shown to users who do not have permissions to use it. Reported by David Herrera of Alley Interactive.
+
+- WP_Query is vulnerable to a SQL injection (SQLi) when passing unsafe data. WordPress core is not directly vulnerable to this issue, but we’ve added hardening to prevent plugins and themes from accidentally causing a vulnerability. Reported by Mo Jangda (batmoo).
+
+- A cross-site scripting (XSS) vulnerability was discovered in the posts list table. Reported by Ian Dunn of the WordPress Security Team.
